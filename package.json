@@ -2,7 +2,7 @@
   "name": "list_on_the_fridge",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alxmrd.github.io/list_on_the_fridge/",
+  "homepage": "https://alxmrd.github.io/list_on_the_fridge/SimpleList",
   "dependencies": {
     "@material-ui/core": "^4.9.10",
     "@material-ui/icons": "^4.9.1",
