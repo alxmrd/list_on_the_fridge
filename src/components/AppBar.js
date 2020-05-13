@@ -32,7 +32,6 @@ export default function LogoAppBar() {
       >
         <Toolbar className={classes.toolBar}>
           <img src={logoFont} alt="logo" />
-          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </div>
