@@ -3,8 +3,8 @@ import LogoAppBar from "./components/AppBar.js";
 import BottomNavigate from "./components/BottomNavigation.js";
 import "./App.css";
 import logoOnScreen from "./assets/logoOnScreen.png";
-import Categories from "./components/Categories.js";
-import SimpleList from "./components/SimpleList.js";
+
+import List from "./components/List.js";
 import Products from "./components/Products.js";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -20,7 +20,7 @@ const theme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: "Arial",
+    fontFamily: `"Roboto", "Helvetica", "Arial", sans-serif`,
     fontSize: 15,
   },
 });
@@ -36,11 +36,8 @@ function App() {
           <Router>
             <div>
               <Switch>
-                <Route path="/list_on_the_fridge/SimpleList">
-                  <SimpleList />
-                </Route>
-                <Route path="/list_on_the_fridge/Categories">
-                  <Categories />
+                <Route path="/list_on_the_fridge/List">
+                  <List />
                 </Route>
                 <Route path="/list_on_the_fridge/Products">
                   <Products />
