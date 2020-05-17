@@ -9,7 +9,7 @@ const useStyles = makeStyles({
   root: {
     minWidth: 275,
     margin: "20px",
-    backgroundColor: "#dddddd",
+    backgroundColor: "#dbf2ff",
   },
 
   title: {
