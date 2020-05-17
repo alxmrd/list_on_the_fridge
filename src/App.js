@@ -36,12 +36,11 @@ function App() {
           <Router>
             <div>
               <Switch>
-                <Route path="/list_on_the_fridge/List">
-                  <List />
-                </Route>
-                <Route path="/list_on_the_fridge/Products">
-                  <Products />
-                </Route>
+                <Route exact path="/list_on_the_fridge/" component={List} />
+                <Route
+                  path="/list_on_the_fridge/Products"
+                  component={Products}
+                />
               </Switch>
             </div>
 

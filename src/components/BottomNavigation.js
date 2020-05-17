@@ -10,8 +10,6 @@ import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import FormatListNumberedIcon from "@material-ui/icons/FormatListNumbered";
 import SimpleList from "./SimpleList.js";
 import FastfoodIcon from "@material-ui/icons/Fastfood";
-import Fab from "@material-ui/core/Fab";
-import AddIcon from "@material-ui/icons/Add";
 
 const theme = createMuiTheme({
   palette: {
@@ -48,7 +46,7 @@ export default function BottomNavigate() {
       >
         <BottomNavigationAction
           component={Link}
-          to="/list_on_the_fridge/List"
+          to="/list_on_the_fridge/"
           label="List"
           icon={<FormatListNumberedIcon />}
         />
