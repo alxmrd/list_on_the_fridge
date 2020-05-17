@@ -1,26 +1,28 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
-import InputBase from "@material-ui/core/InputBase";
+import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteForever from "@material-ui/icons/DeleteForever";
 import DoneOutline from "@material-ui/icons/DoneOutline";
-
+import { useSelector } from "react-redux";
+import man from "../assets/man.png";
 const useStyles = makeStyles((theme) => ({
   root1: {
     padding: "2px 4px",
-    display: "flex",
+
     alignItems: "center",
     width: "90%",
-    justifyContent: "space-around",
-    marginTop: "10%",
+    justifyContent: "center",
   },
   root: {
     padding: "2px 4px",
     display: "flex",
     alignItems: "center",
     width: "90%",
+    marginTop: "15px",
+    marginLeft: "5%",
   },
   input: {
     marginLeft: theme.spacing(1),
@@ -38,33 +40,38 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ProductCard() {
   const classes = useStyles();
-
+  const { products } = useSelector((state) => ({
+    products: state.products,
+  }));
   return (
     <div className={classes.root1}>
-      <Paper component="form" className={classes.root}>
-        <InputBase
-          className={classes.input}
-          placeholder="Add product on the list"
-          inputProps={{ "aria-label": "search google maps" }}
-          disabled
-        />
-        <IconButton
-          type="submit"
-          color="primary"
-          className={classes.iconButtonDelete}
-          aria-label="search"
-        >
-          <DeleteForever />
-        </IconButton>
-        <Divider className={classes.divider} orientation="vertical" />
-        <IconButton
-          color="primary"
-          className={classes.iconButton}
-          aria-label="directions"
-        >
-          <DoneOutline />
-        </IconButton>
-      </Paper>
+      {products.length > 0 ? (
+        products.map((product) => (
+          <Paper component="form" className={classes.root}>
+            <Typography variant="h6" component="h2" className={classes.input}>
+              {product}
+            </Typography>
+            <IconButton
+              type="submit"
+              color="primary"
+              className={classes.iconButtonDelete}
+              aria-label="search"
+            >
+              <DeleteForever />
+            </IconButton>
+            <Divider className={classes.divider} orientation="vertical" />
+            <IconButton
+              color="primary"
+              className={classes.iconButton}
+              aria-label="directions"
+            >
+              <DoneOutline />
+            </IconButton>
+          </Paper>
+        ))
+      ) : (
+        <img src={man} alt="man" />
+      )}
     </div>
   );
 }

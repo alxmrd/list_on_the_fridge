@@ -34,6 +34,7 @@ export default function AlertDialogSlide() {
   const onAgreeClick = (event) => {
     dispatch(addProduct(product));
     handleClose();
+    setNameOfProduct("");
   };
   return (
     <div>
@@ -65,6 +66,7 @@ export default function AlertDialogSlide() {
             label="e.g. Beer"
             fullWidth
             onChange={handleChange}
+            value={product}
           />
         </DialogContent>
         <DialogActions>
