@@ -3,7 +3,7 @@ import LogoAppBar from "./components/AppBar.js";
 import BottomNavigate from "./components/BottomNavigation.js";
 import "./App.css";
 import logoOnScreen from "./assets/logoOnScreen.png";
-
+import NotFound from "./components/NotFound.js";
 import List from "./components/List.js";
 import Products from "./components/Products.js";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -41,6 +41,7 @@ function App() {
                   path="/list_on_the_fridge/Products"
                   component={Products}
                 />
+                <Route component={NotFound} />
               </Switch>
             </div>
 
