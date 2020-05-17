@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import FormatListNumberedIcon from "@material-ui/icons/FormatListNumbered";
-import SimpleList from "./SimpleList.js";
+import AddProduct from "./AddProduct.js";
 import FastfoodIcon from "@material-ui/icons/Fastfood";
 
 const theme = createMuiTheme({
@@ -51,7 +51,7 @@ export default function BottomNavigate() {
           icon={<FormatListNumberedIcon />}
         />
 
-        <SimpleList />
+        <AddProduct />
 
         <BottomNavigationAction
           component={Link}

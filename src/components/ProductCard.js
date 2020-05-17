@@ -6,15 +6,13 @@ import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteForever from "@material-ui/icons/DeleteForever";
 import DoneOutline from "@material-ui/icons/DoneOutline";
-import Fab from "@material-ui/core/Fab";
-import AddIcon from "@material-ui/icons/Add";
 
 const useStyles = makeStyles((theme) => ({
   root1: {
     padding: "2px 4px",
     display: "flex",
     alignItems: "center",
-    width: "80%",
+    width: "90%",
     justifyContent: "space-around",
     marginTop: "10%",
   },
@@ -22,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "2px 4px",
     display: "flex",
     alignItems: "center",
-    width: "80%",
+    width: "90%",
   },
   input: {
     marginLeft: theme.spacing(1),
@@ -48,6 +46,7 @@ export default function ProductCard() {
           className={classes.input}
           placeholder="Add product on the list"
           inputProps={{ "aria-label": "search google maps" }}
+          disabled
         />
         <IconButton
           type="submit"
@@ -66,9 +65,6 @@ export default function ProductCard() {
           <DoneOutline />
         </IconButton>
       </Paper>
-      <Fab color="secondary" aria-label="add" size="medium">
-        <AddIcon />
-      </Fab>
     </div>
   );
 }
