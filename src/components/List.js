@@ -1,19 +1,16 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
+import ProductCard from "./ProductCard.js";
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 275,
+    display: "flex",
     margin: "20px",
-    backgroundColor: "#dbf2ff",
+    justifyContent: "center",
   },
 
-  title: {
-    fontSize: 17,
+  button: {
+    marginLeft: "5px",
   },
 });
 
@@ -21,10 +18,8 @@ export default function Product() {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root} variant="outlined">
-      <CardContent>
-        <Typography className={classes.title}>Word of the Day</Typography>
-      </CardContent>
-    </Card>
+    <div className={classes.root}>
+      <ProductCard />
+    </div>
   );
 }
