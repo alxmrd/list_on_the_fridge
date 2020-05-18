@@ -10,7 +10,7 @@ import Fab from "@material-ui/core/Fab";
 import AddIcon from "@material-ui/icons/Add";
 import TextField from "@material-ui/core/TextField";
 import { useDispatch } from "react-redux";
-
+import Categories from "./Categories.js";
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -72,6 +72,8 @@ export default function AlertDialogSlide() {
             onChange={handleChange}
             value={product}
           />
+
+          <Categories />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">

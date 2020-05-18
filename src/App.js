@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import LogoAppBar from "./components/AppBar.js";
 import BottomNavigate from "./components/BottomNavigation.js";
 import "./App.css";
@@ -9,6 +9,8 @@ import Products from "./components/Products.js";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { addProduct } from "./store/actions/actions";
+import { useDispatch } from "react-redux";
 
 const theme = createMuiTheme({
   palette: {
@@ -29,6 +31,11 @@ const theme = createMuiTheme({
   },
 });
 function App() {
+  const dispatch = useDispatch();
+  var allEntries = JSON.parse(localStorage.getItem("products"));
+  useEffect(() => {
+    allEntries.map((entry) => dispatch(addProduct(entry)));
+  });
   return (
     <div className="App">
       <CssBaseline />

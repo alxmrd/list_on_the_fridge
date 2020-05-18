@@ -1,57 +1,55 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormControl from "@material-ui/core/FormControl";
 
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275,
-  },
-  bullet: {
-    display: "inline-block",
-    margin: "0 2px",
-    transform: "scale(0.8)",
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
-});
+export default function RadioButtonsGroup() {
+  const [value, setValue] = React.useState("female");
 
-export default function Categories() {
-  const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
 
   return (
-    <Card className={classes.root}>
-      <CardContent>
-        <Typography
-          className={classes.title}
-          color="textSecondary"
-          gutterBottom
-        >
-          Word of the Day
-        </Typography>
-        <Typography variant="h5" component="h2">
-          be{bull}nev{bull}o{bull}lent
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          adjective
-        </Typography>
-        <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+    <FormControl component="fieldset">
+      <RadioGroup
+        aria-label="gender"
+        name="gender1"
+        value={value}
+        onChange={handleChange}
+      >
+        <FormControlLabel
+          value="food"
+          control={<Radio color="primary" />}
+          label="food 🥓 🥩 🍗 🍖"
+        />
+        <FormControlLabel
+          value="drinks"
+          control={<Radio color="primary" />}
+          label="drinks 🍺 🍻 🍷 🥃"
+        />
+        <FormControlLabel
+          value="frozen goods"
+          control={<Radio color="primary" />}
+          label="frozen goods 🥶"
+        />
+        <FormControlLabel
+          value="dairy"
+          control={<Radio color="primary" />}
+          label="dairy 🥛 🍼  🍵 🍶"
+        />
+        <FormControlLabel
+          value="fruits & vegedables"
+          control={<Radio color="primary" />}
+          label="fruits & vegedables 🥑 🥦 🍌 🍉"
+        />
+        <FormControlLabel
+          value="consumables"
+          control={<Radio color="primary" />}
+          label="consumables 🧻 🧼 🧴 🧽"
+        />
+      </RadioGroup>
+    </FormControl>
   );
 }

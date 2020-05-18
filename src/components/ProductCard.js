@@ -49,7 +49,7 @@ export default function ProductCard() {
   return (
     <div className={classes.root1}>
       {products.length > 0 ? (
-        products[0].map((product) => (
+        products.map((product) => (
           <Paper component="form" className={classes.root} key={product}>
             <Typography variant="h6" component="h2" className={classes.input}>
               {product}
