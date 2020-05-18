@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 30,
   },
   input: {
-    marginLeft: theme.spacing(1),
+    marginLeft: theme.spacing(11),
     flex: 1,
   },
   iconButtonDelete: {
