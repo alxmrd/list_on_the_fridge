@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/list_on_the_fridge/static/css/main.dafd2014.chunk.css",
-    "main.js": "/list_on_the_fridge/static/js/main.5ed62210.chunk.js",
-    "main.js.map": "/list_on_the_fridge/static/js/main.5ed62210.chunk.js.map",
+    "main.css": "/list_on_the_fridge/static/css/main.8abf6e27.chunk.css",
+    "main.js": "/list_on_the_fridge/static/js/main.cac5984e.chunk.js",
+    "main.js.map": "/list_on_the_fridge/static/js/main.cac5984e.chunk.js.map",
     "runtime-main.js": "/list_on_the_fridge/static/js/runtime-main.cc303245.js",
     "runtime-main.js.map": "/list_on_the_fridge/static/js/runtime-main.cc303245.js.map",
-    "static/js/2.77e9b66e.chunk.js": "/list_on_the_fridge/static/js/2.77e9b66e.chunk.js",
-    "static/js/2.77e9b66e.chunk.js.map": "/list_on_the_fridge/static/js/2.77e9b66e.chunk.js.map",
+    "static/js/2.4aa24517.chunk.js": "/list_on_the_fridge/static/js/2.4aa24517.chunk.js",
+    "static/js/2.4aa24517.chunk.js.map": "/list_on_the_fridge/static/js/2.4aa24517.chunk.js.map",
     "index.html": "/list_on_the_fridge/index.html",
-    "precache-manifest.a6cbb44ab5af9650b6db3a9f173be7e2.js": "/list_on_the_fridge/precache-manifest.a6cbb44ab5af9650b6db3a9f173be7e2.js",
+    "precache-manifest.b469d407786c76c48e33cf845578202b.js": "/list_on_the_fridge/precache-manifest.b469d407786c76c48e33cf845578202b.js",
     "service-worker.js": "/list_on_the_fridge/service-worker.js",
-    "static/css/main.dafd2014.chunk.css.map": "/list_on_the_fridge/static/css/main.dafd2014.chunk.css.map",
-    "static/js/2.77e9b66e.chunk.js.LICENSE.txt": "/list_on_the_fridge/static/js/2.77e9b66e.chunk.js.LICENSE.txt",
+    "static/css/main.8abf6e27.chunk.css.map": "/list_on_the_fridge/static/css/main.8abf6e27.chunk.css.map",
+    "static/js/2.4aa24517.chunk.js.LICENSE.txt": "/list_on_the_fridge/static/js/2.4aa24517.chunk.js.LICENSE.txt",
     "static/media/logoFont.png": "/list_on_the_fridge/static/media/logoFont.4429dcd1.png",
     "static/media/logoOnScreen.png": "/list_on_the_fridge/static/media/logoOnScreen.db1b4dfe.png",
     "static/media/man.png": "/list_on_the_fridge/static/media/man.77353617.png"
   },
   "entrypoints": [
     "static/js/runtime-main.cc303245.js",
-    "static/js/2.77e9b66e.chunk.js",
-    "static/css/main.dafd2014.chunk.css",
-    "static/js/main.5ed62210.chunk.js"
+    "static/js/2.4aa24517.chunk.js",
+    "static/css/main.8abf6e27.chunk.css",
+    "static/js/main.cac5984e.chunk.js"
   ]
 }
