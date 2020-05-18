@@ -34,8 +34,12 @@ export default function AlertDialogSlide() {
   const onAgreeClick = (event) => {
     dispatch(addProduct(product));
     handleClose();
+    var allEntries = JSON.parse(localStorage.getItem("products")) || [];
+    allEntries.push(product);
+    localStorage.setItem("products", JSON.stringify(allEntries));
     setNameOfProduct("");
   };
+
   return (
     <div>
       <Fab
@@ -71,10 +75,10 @@ export default function AlertDialogSlide() {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
-            Disagree
+            Cancel
           </Button>
           <Button onClick={onAgreeClick} color="primary">
-            Agree
+            Add
           </Button>
         </DialogActions>
       </Dialog>

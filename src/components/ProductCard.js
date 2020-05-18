@@ -8,6 +8,7 @@ import DeleteForever from "@material-ui/icons/DeleteForever";
 import DoneOutline from "@material-ui/icons/DoneOutline";
 import { useSelector } from "react-redux";
 import man from "../assets/man.png";
+
 const useStyles = makeStyles((theme) => ({
   root1: {
     padding: "2px 4px",
@@ -23,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     width: "90%",
     marginTop: "15px",
     marginLeft: "5%",
+    borderRadius: 30,
   },
   input: {
     marginLeft: theme.spacing(1),
@@ -43,11 +45,12 @@ export default function ProductCard() {
   const { products } = useSelector((state) => ({
     products: state.products,
   }));
+
   return (
     <div className={classes.root1}>
       {products.length > 0 ? (
-        products.map((product) => (
-          <Paper component="form" className={classes.root}>
+        products[0].map((product) => (
+          <Paper component="form" className={classes.root} key={product}>
             <Typography variant="h6" component="h2" className={classes.input}>
               {product}
             </Typography>
@@ -70,7 +73,12 @@ export default function ProductCard() {
           </Paper>
         ))
       ) : (
-        <img src={man} alt="man" />
+        <div>
+          <Typography variant="h6" component="h2" className={classes.input}>
+            Your List is empty <span>🙄</span>
+          </Typography>
+          <img src={man} alt="man" />
+        </div>
       )}
     </div>
   );
