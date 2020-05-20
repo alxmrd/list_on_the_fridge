@@ -8,6 +8,8 @@ import DeleteForever from "@material-ui/icons/DeleteForever";
 import DoneOutline from "@material-ui/icons/DoneOutline";
 import { useSelector } from "react-redux";
 import man from "../assets/man.png";
+import { useDispatch } from "react-redux";
+import { deleteProduct } from "../store/actions/actions";
 
 const useStyles = makeStyles((theme) => ({
   root1: {
@@ -27,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 30,
   },
   input: {
-    marginLeft: theme.spacing(11),
+    marginLeft: theme.spacing(15),
     flex: 1,
   },
   iconButtonDelete: {
@@ -44,21 +46,30 @@ export default function ProductCard() {
   const classes = useStyles();
   const { products } = useSelector((state) => ({
     products: state.products,
+    id: state.products.id,
   }));
 
+  const onDeleteClick = (id) => {
+    dispatch(deleteProduct(id));
+    var allEntries = JSON.parse(localStorage.getItem("products")) || [];
+    allEntries.splice(id, 1);
+
+    localStorage.setItem("products", JSON.stringify(allEntries));
+  };
+  const dispatch = useDispatch();
   return (
     <div className={classes.root1}>
       {products.length > 0 ? (
         products.map((product) => (
-          <Paper component="form" className={classes.root} key={product}>
+          <Paper component="form" className={classes.root} key={product.id}>
             <Typography variant="h6" component="h2" className={classes.input}>
-              {product}
+              {product.name}
             </Typography>
             <IconButton
-              type="submit"
               color="primary"
               className={classes.iconButtonDelete}
               aria-label="search"
+              onClick={(id) => onDeleteClick(product.id)}
             >
               <DeleteForever />
             </IconButton>

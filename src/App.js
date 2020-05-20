@@ -34,7 +34,9 @@ function App() {
   const dispatch = useDispatch();
   var allEntries = JSON.parse(localStorage.getItem("products"));
   useEffect(() => {
-    allEntries.map((entry) => dispatch(addProduct(entry)));
+    if (allEntries) {
+      allEntries.map((entry) => dispatch(addProduct(entry)));
+    }
   });
   return (
     <div className="App">
