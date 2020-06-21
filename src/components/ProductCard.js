@@ -9,7 +9,7 @@ import DoneOutline from "@material-ui/icons/DoneOutline";
 import { useSelector } from "react-redux";
 import man from "../assets/man.png";
 import { useDispatch } from "react-redux";
-import { deleteProduct } from "../store/actions/actions";
+import { deleteProduct, checkProduct } from "../store/actions/actions";
 
 const useStyles = makeStyles((theme) => ({
   root1: {
@@ -78,6 +78,7 @@ export default function ProductCard() {
               color="primary"
               className={classes.iconButton}
               aria-label="directions"
+              onClick={() => dispatch(checkProduct(product.id))}
             >
               <DoneOutline />
             </IconButton>
